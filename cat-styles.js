@@ -21,7 +21,7 @@ CAT_STYLES.forEach(({file, name}, index) => {
   button.setAttribute("aria-label", `选择${name}`);
   button.dataset.index = index;
   const image = document.createElement("img");
-  image.src = `${file}`;
+  image.src = `cats/${file}`;
   image.alt = "";
   button.append(image);
   button.addEventListener("click", () => selectCat(index));
