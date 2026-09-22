@@ -94,6 +94,7 @@ function registerTap() {
   }
 }
 movingCat.addEventListener('pointerdown', event => {
+  if (event.cancelable) event.preventDefault();
   if ((typeof busy !== 'undefined' && busy) || rapidCooldown) return;
   pointerActive = true;
   longPressTriggered = false;
