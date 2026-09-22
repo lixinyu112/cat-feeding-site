@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今天给猫吃什么？</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cutout-cat.css">
+  <link rel="stylesheet" href="picker.css">
+  <link rel="stylesheet" href="food-target.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <small>TODAY'S MENU</small>
+      <h1>今天给猫吃什么？</h1>
+      <p>输入食物，偶尔也可以递给它奇怪的东西。</p>
+    </header>
+    <section class="stage" id="stage" aria-label="猫咪投喂场景">
+      <div class="speech" id="speech" aria-live="polite">我准备好了。</div>
+      <div class="cat" id="cat" role="button" tabindex="0" aria-label="摸摸这只卡通猫咪">
+        <span class="cat-cutout"></span>
+      </div>
+      <div id="foodPop" class="food-pop" aria-hidden="true"></div>
+      <div class="bowl"><span id="bowlFood"></span><i></i></div>
+      <div class="shadow"></div>
+    </section>
+    <section class="cat-wardrobe" aria-label="选择猫咪形象">
+      <div class="wardrobe-title">
+        <h2>今天让哪只猫出场？</h2>
+        <span id="catStyleName">黑白异色瞳</span>
+      </div>
+      <div class="cat-swatches" id="catSwatches"></div>
+    </section>
+    <form id="feedForm">
+      <div class="input">
+        <label for="foodInput">给猫看</label>
+        <input id="foodInput" maxlength="20" placeholder="比如：鱼、苹果、猫粮、纸箱…" required>
+        <button id="feedButton" type="submit">递给它 →</button>
+      </div>
+    </form>
+    <section class="picker" aria-label="可选的食物与物品">
+      <div class="picker-head">
+        <h2>翻翻猫的菜单</h2>
+        <span id="pickerCount"></span>
+      </div>
+      <div class="picker-tabs" id="pickerTabs" role="tablist" aria-label="类别"></div>
+      <div class="picker-options" id="pickerOptions" role="tabpanel"></div>
+    </section>
+    <footer>
+      <span>已递给猫 <b id="feedCount">0</b> 样东西</span>
+      <button id="historyButton" type="button">看看它收到什么</button>
+    </footer>
+    <aside id="history" aria-label="猫的收件簿">
+      <button id="historyClose" type="button" aria-label="关闭">×</button>
+      <h2>猫的收件簿</h2>
+      <div id="historyList"></div>
+    </aside>
+  </main>
+  <script src="food-data.js"></script>
+  <script src="app.js"></script>
+  <script src="picker.js"></script>
+  <script src="cat-motion.js"></script>
+  <script src="cat-styles.js"></script>
+</body>
+</html>

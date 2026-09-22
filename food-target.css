@@ -1,0 +1,6 @@
+.food-pop {
+  left: 50%;
+  bottom: 82px;
+  pointer-events: none;
+}
+.food-pop:not(:empty) { opacity: 1; }
