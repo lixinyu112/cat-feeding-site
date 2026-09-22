@@ -179,7 +179,6 @@ function feed(raw) {
       } finally {
         busy = false;
         $("#feedButton").disabled = false;
-        $("#foodInput").focus();
       }
     }, edible ? 900 : 350);
   }, 500);
