@@ -69,3 +69,6 @@
 @media (max-width: 600px) {
   .cat { width: 285px; height: 285px; bottom: 30px; }
 }
+
+<Cwebkit-touch-callout: none;
+}</CodeBlock>
