@@ -70,5 +70,18 @@
   .cat { width: 285px; height: 285px; bottom: 30px; }
 }
 
-<Cwebkit-touch-callout: none;
-}</CodeBlock>
+<text preserveWhitespace>{`/* 去除手机点击猫咪时的蓝色高亮 */
+#cat,
+.cat,
+.cat-cutout {
+-webkit-tap-highlight-color: transparent !important;
+-webkit-user-select: none;
+user-select: none;
+-webkit-touch-callout: none;
+}
+
+/* 去除触摸后残留的焦点框 */
+#cat:focus:not(:focus-visible) {
+outline: none;
+box-shadow: none;
+}`}</text>
