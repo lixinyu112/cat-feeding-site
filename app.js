@@ -151,6 +151,7 @@ function finish(food, item) {
 function feed(raw) {
   const food = raw.trim();
   if (!food || busy) return false;
+  if (typeof interruptIdleState === "function") interruptIdleState();
   if (typeof cancelPetReaction === "function") cancelPetReaction();
   clearTimeout(resetTimer);
   resetTimer = undefined;

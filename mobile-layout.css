@@ -1,0 +1,21 @@
+@media (max-width: 600px) {
+  .stage {
+    height: 360px;
+    scale: .9;
+    margin: 18px 0 -8px;
+  }
+
+  .speech {
+    top: -8px;
+    right: 50%;
+    transform: translateX(50%);
+    width: min(190px, 70vw);
+    max-width: 190px;
+    padding: 8px 11px;
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 3px 4px #d6a67f;
+  }
+}

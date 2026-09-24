@@ -61,6 +61,7 @@ function particles(symbols, amount = 4) {
 }
 function react(lines, className, duration = 2600, symbols = ['♡', '✦', '💗', '♪']) {
   if (typeof busy !== 'undefined' && busy) return;
+  if (typeof interruptIdleState === 'function') interruptIdleState();
   movingCat.classList.remove('petted', 'nuzzled', 'zoomies');
   void movingCat.offsetWidth;
   movingCat.classList.add(className);
